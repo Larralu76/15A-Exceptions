@@ -43,5 +43,19 @@ char character(char start, int offset)
 			throw caseConversionException();
 		}
 	}
+
+	catch (invalidCharacterException exceptionOne)
+	{
+		cout << "Invlalid Range Exception" << endl;
+		return ' ';
+	}
+	catch (invalidRangeException exceptionTwo)
+	{
+		cout << "Invalid Range Exception" << endl;
+		return ' ';
+	}
+	return char(target);
 }
+
+
 
