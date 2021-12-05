@@ -44,3 +44,4 @@ char character(char start, int offset)
 		}
 	}
 }
+
