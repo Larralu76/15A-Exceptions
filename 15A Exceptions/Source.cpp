@@ -46,7 +46,7 @@ char character(char start, int offset)
 
 	catch (invalidCharacterException exceptionOne)
 	{
-		cout << "Invlalid Range Exception" << endl;
+		cout << "Invalid Character Exception" << endl;
 		return ' ';
 	}
 	catch (invalidRangeException exceptionTwo)
@@ -54,6 +54,12 @@ char character(char start, int offset)
 		cout << "Invalid Range Exception" << endl;
 		return ' ';
 	}
+	catch (caseConversionException exceptionThree)
+	{
+		cout << "Can't make changes from upper to lower case or lower to upper case" << endl;
+		return ' ';
+	}
+
 	return char(target);
 }
 
@@ -63,7 +69,7 @@ int main()
 	cout << character('a', -1) << endl;
 	cout << character('Z', -1) << endl;
 	cout << character('?', 5) << endl;
-	cout << character('a', 32) << endl;
+	cout << character('A', 32) << endl;
 }
 
 
