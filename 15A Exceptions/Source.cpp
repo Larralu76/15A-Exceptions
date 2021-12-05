@@ -57,5 +57,13 @@ char character(char start, int offset)
 	return char(target);
 }
 
+int main()
+{
+	cout << character('a', 1) << endl;
+	cout << character('a', -1) << endl;
+	cout << character('Z', -1) << endl;
+	cout << character('?', 5) << endl;
+	cout << character('a', 32) << endl;
+}
 
 
